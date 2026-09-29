@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* next-themes इसे अपने आप हैंडल कर लेगा, इसलिए फिक्स डार्क स्कीम हटा दी है */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 🚀 असली जादू यहाँ है: लाइट मोड के लिए white/black और डार्क मोड के लिए graphite/mist */
+body {
+  @apply bg-white text-black dark:bg-graphite dark:text-mist antialiased transition-colors duration-300;
+}
+
+::selection {
+  @apply bg-violet/30 text-mist;
+}
+
+:focus-visible {
+  outline: 2px solid theme("colors.violet.DEFAULT");
+  outline-offset: 3px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.glow {
+  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 0%), rgba(124,92,255,0.15), transparent 60%);
+}
+
+/* Notch preview themes (ये तेरे कार्ड्स के डिज़ाइन हैं, इन्हें ऐसे ही रहने दे) */
+[data-theme="obsidian"]{--n-bg:#0B0B14;--n-surface:#1B1B28;--n-line:#2A2A3D;--n-text:#EDEDF5;--n-dim:#9A97AD;--n-accent:#7C5CFF;}
+[data-theme="paper"]{--n-bg:#F6F5F1;--n-surface:#FFFFFF;--n-line:#E2E0D8;--n-text:#1B1B22;--n-dim:#6B6A76;--n-accent:#5B3FE0;}
+[data-theme="aurora"]{--n-bg:#0A1424;--n-surface:#12223A;--n-line:#1F3556;--n-text:#E8F4FF;--n-dim:#8FA9C4;--n-accent:#38BDF8;}
+[data-theme="terminal"]{--n-bg:#050805;--n-surface:#0B130B;--n-line:#16301A;--n-text:#B6FFB6;--n-dim:#5FA05F;--n-accent:#39FF6A;}
+[data-theme="ember"]{--n-bg:#150C08;--n-surface:#241510;--n-line:#3A2219;--n-text:#FFEDE0;--n-dim:#B58F7A;--n-accent:#FF7A3D;}

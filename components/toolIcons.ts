@@ -1,0 +1,42 @@
+import {
+  LayoutDashboard,
+  MessageSquareText,
+  MoonStar,
+  BarChart3,
+  LineChart,
+  Calculator,
+  CalendarDays,
+  ArrowLeftRight,
+  StickyNote,
+  Wand2,
+  Clipboard,
+  Hourglass,
+  CloudSun,
+  Mic,
+  Leaf,
+  TimerReset,
+  Cpu,
+  QrCode,
+  type LucideIcon
+} from "lucide-react";
+
+export const toolIcons: Record<string, LucideIcon> = {
+  home: LayoutDashboard,
+  message: MessageSquareText,
+  focus: MoonStar,
+  analytics: BarChart3,
+  revenue: LineChart,
+  calculator: Calculator,
+  calendar: CalendarDays,
+  units: ArrowLeftRight,
+  notes: StickyNote,
+  files: Wand2,
+  clipboard: Clipboard,
+  screentime: Hourglass,
+  weather: CloudSun,
+  voicememos: Mic,
+  naturesounds: Leaf,
+  timer: TimerReset,
+  systemstats: Cpu,
+  qr: QrCode
+};

@@ -1,0 +1,86 @@
+import type { Metadata } from "next";
+import { Space_Grotesk, Inter } from "next/font/google";
+import "./globals.css";
+import { product } from "@/config/product";
+import { Providers } from "./providers";
+import ThemeToggle from "@/components/ThemeToggle";
+
+const display = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["500", "600", "700"]
+});
+
+const sans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  weight: ["400", "500", "600"]
+});
+
+// 🚀 Advanced SEO Metadata with notchledge.com
+export const metadata: Metadata = {
+  metadataBase: new URL("https://notchledge.com"),
+  title: {
+    default: `${product.name} — ${product.tagline}`,
+    template: `%s | ${product.name}`
+  },
+  description: "Access 20+ powerful tools like Screen Time, Analytics, Weather, and Quick Notes directly from your MacBook notch. No subscriptions, just a seamless workflow.",
+  keywords: [
+    "macOS productivity app", 
+    "MacBook notch tools", 
+    "NotchLedge", 
+    "clipboard manager mac", 
+    "mac screen time", 
+    "notch utilities",
+    "mac menu bar app",
+    "one time purchase mac app"
+  ],
+  authors: [{ name: "NotchLedge Team" }],
+  creator: "NotchLedge",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    title: `${product.name} — ${product.tagline}`,
+    description: "Access 20+ powerful tools directly from your MacBook notch.",
+    siteName: product.name,
+    images: [
+      {
+        url: "/screens/message.png",
+        width: 1200,
+        height: 630,
+        alt: "NotchLedge - Mac Workspace in your Notch"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${product.name} — ${product.tagline}`,
+    description: "Your entire Mac workspace, right inside your notch.",
+    images: ["/screens/message.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" className={`${display.variable} ${sans.variable}`} suppressHydrationWarning>
+      <body>
+        <Providers>
+          {children}
+          <ThemeToggle />
+        </Providers>
+      </body>
+    </html>
+  );
+}
