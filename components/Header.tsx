@@ -50,7 +50,7 @@ export function Header() {
         <div className="flex items-center">
           <a
             // 🚀 DODO PAYMENTS LINK UPDATED HERE
-            href="https://test.checkout.dodopayments.com/buy/pdt_0No48XLZ8cj3sv8CrMVTj?quantity=1"
+            href="https://checkout.dodopayments.com/buy/pdt_0NofQcIY78ORdEuafxEvM?quantity=1"
             className="rounded-full bg-slate-900 px-5 py-2 text-sm font-bold text-white dark:bg-white dark:text-black transition-all hover:scale-105 active:scale-95 shadow-md dark:shadow-[0_0_20px_rgba(255,255,255,0.2)] hidden md:inline-block"
           >
             Buy license
