@@ -60,7 +60,7 @@ export default function ToolsBento() {
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2 transition-colors">Track your focus.</h3>
               <p className="text-slate-500 dark:text-gray-500 text-xs md:text-sm leading-relaxed transition-colors">
-                See how much time you've spent on Chrome, Xcode, or any app without opening Activity Monitor.
+                See how much time you&apos;ve spent on Chrome, Xcode, or any app without opening Activity Monitor.
               </p>
             </div>
             
@@ -75,23 +75,23 @@ export default function ToolsBento() {
           {/* Card 2: Weather */}
           <motion.div variants={itemVariants} className="bg-white/70 dark:bg-white/[0.02] backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-gray-200/50 dark:border-white/5 hover:border-gray-300 dark:hover:border-white/10 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md dark:shadow-none group">
              <div>
-                <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 mb-3 text-xs font-semibold tracking-wide uppercase transition-colors">
-                  <Cloud size={16} /> Weather
-                </div>
-                <h3 className="text-lg md:text-xl font-bold mb-1 transition-colors">Live Updates.</h3>
+                 <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 mb-3 text-xs font-semibold tracking-wide uppercase transition-colors">
+                   <Cloud size={16} /> Weather
+                 </div>
+                 <h3 className="text-lg md:text-xl font-bold mb-1 transition-colors">Live Updates.</h3>
              </div>
              <div className="text-5xl md:text-6xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-slate-900 to-slate-500 dark:from-white dark:to-gray-600 group-hover:scale-105 transition-transform duration-300 origin-left">
-               25°
+              25°
              </div>
           </motion.div>
 
           {/* Card 3: Notes */}
           <motion.div variants={itemVariants} className="bg-white/70 dark:bg-white/[0.02] backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-gray-200/50 dark:border-white/5 hover:border-gray-300 dark:hover:border-white/10 transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-md dark:shadow-none">
              <div>
-                <div className="flex items-center gap-2 text-yellow-600 dark:text-yellow-400 mb-3 text-xs font-semibold tracking-wide uppercase transition-colors">
-                  <FileText size={16} /> Quick Notes
-                </div>
-                <h3 className="text-lg md:text-xl font-bold mb-3 transition-colors">Jot it down.</h3>
+                 <div className="flex items-center gap-2 text-yellow-600 dark:text-yellow-400 mb-3 text-xs font-semibold tracking-wide uppercase transition-colors">
+                   <FileText size={16} /> Quick Notes
+                 </div>
+                 <h3 className="text-lg md:text-xl font-bold mb-3 transition-colors">Jot it down.</h3>
              </div>
              <div className="p-3 bg-slate-100 dark:bg-black/30 rounded-lg text-slate-600 dark:text-gray-400 text-xs font-mono border border-gray-200/50 dark:border-white/5 shadow-inner transition-colors">
                 <span className="text-purple-600 dark:text-purple-400">TODO:</span> Buy coffee<br/>
@@ -118,7 +118,7 @@ export default function ToolsBento() {
                 <h3 className="text-xl md:text-2xl font-bold mb-2 transition-colors">Math made easy.</h3>
                 <p className="text-slate-500 dark:text-gray-500 text-xs md:text-sm leading-relaxed transition-colors">
                   Perform quick calculations or convert currencies and units on the fly without breaking your workflow.
-                </p>
+               </p>
              </div>
           </motion.div>
 

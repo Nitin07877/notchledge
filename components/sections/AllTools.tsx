@@ -19,7 +19,7 @@ export function AllTools() {
           </h2>
           {/* 🚀 Main Subtitle */}
           <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed transition-colors">
-            Turn off what you don't need and it disappears. NotchLedge only ever holds what you actually use, keeping your Mac perfectly clean.
+            Turn off what you don&apos;t need and it disappears. NotchLedge only ever holds what you actually use, keeping your Mac perfectly clean.
           </p>
         </div>
 
@@ -94,7 +94,7 @@ export function AllTools() {
               </div>
               <h3 className="text-2xl font-bold text-black dark:text-white mb-3 transition-colors">Never lose a link.</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm transition-colors">
-                Access everything you've copied recently. Search through texts, hex codes, or links instantly.
+                Access everything you&apos;ve copied recently. Search through texts, hex codes, or links instantly.
               </p>
             </div>
             <div className="mt-auto relative rounded-xl overflow-hidden border border-gray-200 dark:border-white/5 shadow-xl transition-colors">

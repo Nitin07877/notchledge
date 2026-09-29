@@ -124,7 +124,7 @@ export function Behavior() {
                 </div>
                 <h4 className="text-xl font-bold text-black dark:text-white mb-2 transition-colors">Turn your notch into a sign.</h4>
                 <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm leading-relaxed transition-colors">
-                  Animate custom text ("Hello NotchLedge") right inside the notch with Wave, Bounce, Pulse, or Rainbow styles.
+                  Animate custom text (&quot;Hello NotchLedge&quot;) right inside the notch with Wave, Bounce, Pulse, or Rainbow styles.
                 </p>
               </div>
               
