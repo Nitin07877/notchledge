@@ -14,7 +14,7 @@ export function Footer() {
           {/* 🚀 Main Footer Links Grid (3 Columns + 1 Brand Column for better spacing) */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16">
             
-            {/* Column 1: Brand Info (Optional but makes it look pro) */}
+            {/* Column 1: Brand Info */}
             <div className="col-span-2 md:col-span-1">
               <Link href="/" className="font-display font-bold text-xl text-slate-900 dark:text-white tracking-tight flex items-center gap-2 mb-4 transition-colors">
                 <span className="w-2 h-2 rounded-full bg-purple-600 dark:bg-purple-500" />
@@ -46,11 +46,10 @@ export function Footer() {
               <h4 className="font-semibold text-slate-900 dark:text-white mb-6 transition-colors">Company</h4>
               <ul className="space-y-4 text-sm text-slate-600 dark:text-gray-400">
                 <li>
-                  <a href={`mailto:${product.email}`} className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Contact</a>
+                  <a href="mailto:fasttech7010@gmail.com" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Contact</a>
                 </li>
                 <li><Link href="/privacy" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Terms</Link></li>
-                {/* 🚀 X (Twitter) Link - Replace 'yourhandle' with your actual username */}
                 <li>
                   <a href="https://x.com/FastTech7010" target="_blank" rel="noopener noreferrer" className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                     X (Twitter)
