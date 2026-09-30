@@ -139,7 +139,7 @@ export default function HowToUsePage() {
               </p>
               
               <a
-                href="https://test.checkout.dodopayments.com/buy/pdt_0No48XLZ8cj3sv8CrMVTj?quantity=1"
+                href={process.env.CHECKOUT_URL}
                 className="mt-8 inline-block rounded-full bg-slate-900 px-8 py-4 text-sm font-bold text-white hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-lg"
               >
                 Get {product.name} Now
