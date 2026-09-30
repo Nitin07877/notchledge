@@ -80,6 +80,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <ThemeToggle />
         </Providers>
+
+        {/* Cloudflare Web Analytics */}
+        <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e6d005ac439f4330b50bbc419d376e55"}'></script>
       </body>
     </html>
   );
