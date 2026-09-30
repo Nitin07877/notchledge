@@ -9,13 +9,14 @@ export async function POST(req: Request) {
             return NextResponse.json({ valid: false, message: "License key is missing" }, { status: 400 });
         }
 
-        // Dodo Payments का ऑफिशियल टेस्ट वैलिडेट एंडपॉइंट
         const dodoApiUrl = `https://test.dodopayments.com/licenses/validate`; 
         
         const dodoResponse = await fetch(dodoApiUrl, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                // यहाँ तुझे अपनी Dodo की Secret Key डालनी है (.env फाइल से)
+                'Authorization': `Bearer ${process.env.DODO_SECRET_KEY}` 
             },
             body: JSON.stringify({
                 license_key: licenseKey
@@ -28,7 +29,6 @@ export async function POST(req: Request) {
 
         const data = await dodoResponse.json();
 
-        // Dodo का यह एंडपॉइंट सीधा { valid: true } या false देता है
         if (data.valid === true) {
             return NextResponse.json({ valid: true, message: "License Activated Successfully!" });
         } else {

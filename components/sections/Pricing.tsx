@@ -71,7 +71,7 @@ export function Pricing() {
 
             <a
               // 🚀 DODO PAYMENTS LINK
-              href="https://checkout.dodopayments.com/buy/pdt_0NofQcIY78ORdEuafxEvM?quantity=1"
+              href={process.env.CHECKOUT_URL}
               className="group relative flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 px-6 py-3.5 text-center text-base font-bold text-white dark:bg-white dark:text-black transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg dark:shadow-[0_0_20px_rgba(255,255,255,0.2)]"
             >
               Buy lifetime license

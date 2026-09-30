@@ -18,7 +18,7 @@ export function FinalCTA() {
         
         <a
           // 🚀 तेरा Dodo Payments वाला लिंक यहाँ अपडेट कर दिया है
-          href="https://checkout.dodopayments.com/buy/pdt_0NofQcIY78ORdEuafxEvM?quantity=1"
+          href={process.env.CHECKOUT_URL}
           className="mt-8 inline-block rounded-full bg-violet-600 px-8 py-3 text-sm font-medium text-white hover:bg-violet-700 dark:bg-violet-500 dark:hover:bg-violet-400 transition-all duration-300 shadow-lg hover:scale-105"
         >
           Get {product.name}
