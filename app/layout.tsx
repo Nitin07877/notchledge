@@ -8,13 +8,13 @@ import ThemeToggle from "@/components/ThemeToggle";
 const display = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "600", "700"]
+  
 });
 
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600"]
+  
 });
 
 // 🚀 Advanced SEO Metadata with notchledge.com
