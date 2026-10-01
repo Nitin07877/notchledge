@@ -8,13 +8,11 @@ import ThemeToggle from "@/components/ThemeToggle";
 const display = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-display",
-  
 });
 
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  
 });
 
 // 🚀 Advanced SEO Metadata with notchledge.com
@@ -25,6 +23,14 @@ export const metadata: Metadata = {
     template: `%s | ${product.name}`
   },
   description: "Access 20+ powerful tools like Screen Time, Analytics, Weather, and Quick Notes directly from your MacBook notch. No subscriptions, just a seamless workflow.",
+  
+  // 🚀 Favicon / Icons path set here
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+
   keywords: [
     "macOS productivity app", 
     "MacBook notch tools", 
