@@ -9,13 +9,14 @@ export async function POST(req: Request) {
             return NextResponse.json({ valid: false, message: "License key is missing" }, { status: 400 });
         }
 
-        const dodoApiUrl = `https://test.dodopayments.com/licenses/validate`; 
+        // 🚀 FIX: 'test' की जगह 'live' कर दिया है!
+        const dodoApiUrl = `https://live.dodopayments.com/licenses/validate`; 
         
         const dodoResponse = await fetch(dodoApiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                // यहाँ तुझे अपनी Dodo की Secret Key डालनी है (.env फाइल से)
+                // सुनिश्चित करें कि Cloudflare में Variable का नाम बिल्कुल यही (DODO_SECRET_KEY) हो 
                 'Authorization': `Bearer ${process.env.DODO_SECRET_KEY}` 
             },
             body: JSON.stringify({
@@ -29,6 +30,7 @@ export async function POST(req: Request) {
 
         const data = await dodoResponse.json();
 
+        // 🚀 Dodo API का रिस्पॉन्स चेक करें
         if (data.valid === true) {
             return NextResponse.json({ valid: true, message: "License Activated Successfully!" });
         } else {
