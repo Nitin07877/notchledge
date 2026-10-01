@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 
-// 🚀 FIX: Cloudflare के लिए यह लाइन बहुत ज़रूरी है!
+// 🚀 Cloudflare Edge aur Next.js caching ko fix karne ke liye dono zaroori hain
 export const runtime = 'edge';
+export const dynamic = 'force-dynamic'; 
 
 export async function POST(req: Request) {
     try {
