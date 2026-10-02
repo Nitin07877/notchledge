@@ -4,6 +4,7 @@ import "./globals.css";
 import { product } from "@/config/product";
 import { Providers } from "./providers";
 import ThemeToggle from "@/components/ThemeToggle";
+import { GoogleAnalytics } from '@next/third-parties/google'; 
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -18,6 +19,9 @@ const sans = Inter({
 // 🚀 Advanced SEO Metadata with notchledge.com
 export const metadata: Metadata = {
   metadataBase: new URL("https://notchledge.com"),
+  alternates: {
+    canonical: "https://notchledge.com",
+  },
   title: {
     default: `${product.name} — ${product.tagline}`,
     template: `%s | ${product.name}`
@@ -52,7 +56,7 @@ export const metadata: Metadata = {
     siteName: product.name,
     images: [
       {
-        url: "/og-image.png", // 🚀 यहाँ चेंज किया है (message.png हटाकर)
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "NotchLedge - Mac Workspace in your Notch"
@@ -63,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${product.name} — ${product.tagline}`,
     description: "Your entire Mac workspace, right inside your notch.",
-    images: ["/og-image.png"], // 🚀 यहाँ भी चेंज किया है
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -89,6 +93,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Cloudflare Web Analytics */}
         <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e6d005ac439f4330b50bbc419d376e55"}'></script>
+        
+        {/* 🚀 यहाँ G-XXXXXXXXXX को अपनी असली ID से बदल लेना */}
+        <GoogleAnalytics gaId="G-1N0SFYWBHD" />
       </body>
     </html>
   );
