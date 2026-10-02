@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     siteName: product.name,
     images: [
       {
-        url: "/screens/message.png",
+        url: "/og-image.png", // 🚀 यहाँ चेंज किया है (message.png हटाकर)
         width: 1200,
         height: 630,
         alt: "NotchLedge - Mac Workspace in your Notch"
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${product.name} — ${product.tagline}`,
     description: "Your entire Mac workspace, right inside your notch.",
-    images: ["/screens/message.png"],
+    images: ["/og-image.png"], // 🚀 यहाँ भी चेंज किया है
   },
   robots: {
     index: true,
